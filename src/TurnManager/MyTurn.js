@@ -1,6 +1,8 @@
 import React from 'react'
 import { View, Text } from 'react-native'
 
+import {subscribeToMyTurn} from '../services/sockets'
+
 class MyTurn extends React.Component {
   constructor (props) {
     super(props)
@@ -8,6 +10,10 @@ class MyTurn extends React.Component {
       show: false
     }
   }
+  componentDidMount() {
+    subscribeToMyTurn(this.showTurn)
+  }
+
   showTurn = () =>{
     this.setState({show: true})
   }

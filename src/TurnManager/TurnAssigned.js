@@ -1,17 +1,27 @@
 import React from 'react'
-import { Button, View, Text } from 'react-native'
+import { Button, View, Text, StyleSheet } from 'react-native'
 
 class TurnAssigned extends React.Component {
   render () {
     const { turnNumber } = this.props
-    if (turnNumber === null) return null
+    if (turnNumber === null || turnNumber < 1) return null
     return (
-      <View>
-        <View><Text>{turnNumber}</Text></View>
+      <View style={styles.turnContainerStyle}>
+        <View><Text style={styles.turnNumberStyle}>{turnNumber}</Text></View>
         <View><Text>My turn</Text></View>
       </View>
     )
   }
 }
+
+const styles = StyleSheet.create({
+  turnContainerStyle: {
+    textAlign: 'center',
+    paddingBottom: 30
+  },
+  turnNumberStyle: {
+    fontSize: 240
+  }
+})
 
 export default TurnAssigned
