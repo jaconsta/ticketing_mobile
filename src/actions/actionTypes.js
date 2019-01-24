@@ -1,0 +1,5 @@
+export const SET_USER_INFO = 'SET_USER_INFO'
+
+export const SET_COMPANY_DATA = 'SET_COMPANY_DATA'
+
+export const SET_MY_QUEUE_TURN = 'SET_MY_QUEUE_TURN'

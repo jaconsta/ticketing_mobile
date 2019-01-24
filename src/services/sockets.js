@@ -1,6 +1,6 @@
 import socketIo from 'socket.io-client'
 
-const SOCKET_SERVER = 'http://192.168.0.6:8080'
+const SOCKET_SERVER = 'http://127.0.0.1:8080'
 
 const socket = socketIo(SOCKET_SERVER)
 
@@ -16,7 +16,7 @@ export const myAssignedTurn = (cb) => {
   socket.on('turn_booked', (turnNumber) => cb(turnNumber))
 }
 
-export const separateTurn = (cb) => {
+export const enqueueTurn = (cb) => {
   socket.emit('room_turn')
 }
 

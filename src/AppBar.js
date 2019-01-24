@@ -2,14 +2,14 @@ import React from 'react'
 import { View, StatusBar } from 'react-native'
 
 const AppBar = props => {
-    // StatusBar is not rendered on IOs currently
+    // StatusBar is not rendered on IOs currently and I think Android either
     return (
       <View>
         <StatusBar
-          backgroundColor="blue"
+          backgroundColor="red"
           barStyle="light-content"
         />
-        <View style={{ backgroundColor:'#79B45D', height: 44 }}/>
+        <View style={{ backgroundColor:'#EE3239', height: 44 }}/>
       </View>
     )
 }

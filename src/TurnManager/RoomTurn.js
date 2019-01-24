@@ -15,7 +15,7 @@ const RoomTurn = props => {
       <Button
         onPress={requestNewTurn}
         title="Get a new Turn"
-        color="#841584"
+        color="#F3B749"
         accessibilityLabel="Request service a new turn"
       />
     </View>
